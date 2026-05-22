@@ -12,6 +12,8 @@ Thumbs.db
 珠峰光谱4、7、10、12/
 AM0/
 video_spd_intro/
+安装包/临时构建/
+安装包/输出/
 *.inp
 *结果.xlsx
 光谱相关数据.xlsx

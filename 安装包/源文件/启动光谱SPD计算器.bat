@@ -7,6 +7,6 @@ powershell.exe -NoProfile -ExecutionPolicy Bypass -File "%LAUNCHER%"
 
 if errorlevel 1 (
     echo.
-    echo Spectrum Match Analyzer failed to start. Please check SPD_startup_log.txt in this folder.
+    echo Program failed to start. Please check SPD_startup_log.txt in this folder.
     pause
 )

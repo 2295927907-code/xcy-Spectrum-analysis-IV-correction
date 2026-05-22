@@ -11,6 +11,8 @@
 - `video_spd_intro/` 是独立的 HyperFrames 演示视频项目；编辑视频构图时遵守该目录内的 `AGENTS.md`、`CLAUDE.md` 和 `DESIGN.md`，修改后运行 `npm run check`。
 - 默认参考光谱通过 `*AM1.5*.xlsx` 查找；手动选择其他参考表格时，程序会从表头识别可用参考列，例如 `AM0`。默认 SR 依次匹配 `1027SR.xlsx`、`1027SR*.xlsx`、`1025SR.xlsx`、`1025SR*.xlsx`、`*光谱响应*.xlsx`。
 - `启动光谱SPD计算器.bat` 是面向用户的启动入口；`start_spd_calculator.ps1` 是可脚本化入口。
+- `assets/` 存放程序、exe 和安装器共用图标；打包资源路径由 `RESOURCE_DIR` 读取，用户打开/保存默认目录由 `USER_FILES_DIR` 控制。
+- `安装包/` 是 Windows 安装器工作区。修改主程序、默认数据、图标或用户说明后，同步 `安装包/源文件/`；最终外发只发送 `安装包/输出/光谱匹配分析器_Setup.exe`。
 - 源数据文件、`.inp` 输入状态文件、PDF 标准文件、视频素材和用户导出的结果都视为用户数据。不要擅自删除、重命名或覆盖。
 
 ## 验证命令
@@ -29,4 +31,10 @@ GUI 冒烟检查：
 $env:SPD_GUI_SMOKE = "1"
 powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\start_spd_calculator.ps1
 $env:SPD_GUI_SMOKE = $null
+```
+
+复用已有 PyInstaller 输出生成安装器：
+
+```powershell
+powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\安装包\build_installer.ps1 -SkipPyInstaller
 ```

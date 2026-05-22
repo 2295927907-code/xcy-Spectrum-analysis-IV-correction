@@ -62,7 +62,7 @@ try {
     Write-LaunchLog "FAILED: $($_.Exception.Message)"
     Add-Type -AssemblyName PresentationFramework
     [System.Windows.MessageBox]::Show(
-        "Spectrum Match Analyzer failed to start.`n`nPlease check SPD_startup_log.txt in this folder.",
+        "Spectral SPD Calculator failed to start.`n`nPlease check SPD_startup_log.txt in this folder.",
         "Startup failed",
         "OK",
         "Error"
