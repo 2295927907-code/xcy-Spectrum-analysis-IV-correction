@@ -25,11 +25,11 @@ jobs:
         run: choco install innosetup --no-progress -y
 
       - name: Build installer
-        shell: powershell
+        shell: pwsh
         run: |
           [Console]::OutputEncoding = [System.Text.UTF8Encoding]::new($false)
           $OutputEncoding = [Console]::OutputEncoding
-          powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\安装包\build_installer.ps1
+          & .\安装包\build_installer.ps1
 
       - name: Upload installer artifact
         uses: actions/upload-artifact@v4
@@ -39,7 +39,7 @@ jobs:
           if-no-files-found: error
 
       - name: Publish release
-        shell: powershell
+        shell: pwsh
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
