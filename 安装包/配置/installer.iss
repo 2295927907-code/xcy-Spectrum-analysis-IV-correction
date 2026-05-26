@@ -1,4 +1,4 @@
-﻿#define MyAppName "光谱匹配分析器"
+#define MyAppName "光谱匹配分析器"
 #define MyAppVersion "1.0.0"
 #define MyAppPublisher "Spectrum Match Analyzer"
 #define MyAppExeName "光谱匹配分析器.exe"
@@ -33,7 +33,8 @@ Name: "default"; MessagesFile: "compiler:Default.isl"
 Name: "desktopicon"; Description: "创建桌面快捷方式"; GroupDescription: "附加快捷方式："; Flags: unchecked
 
 [Files]
-Source: "..\临时构建\dist\光谱匹配分析器\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: "..\临时构建\dist\SpectrumMatchAnalyzer\SpectrumMatchAnalyzer.exe"; DestDir: "{app}"; DestName: "{#MyAppExeName}"; Flags: ignoreversion
+Source: "..\临时构建\dist\SpectrumMatchAnalyzer\*"; DestDir: "{app}"; Excludes: "SpectrumMatchAnalyzer.exe"; Flags: ignoreversion recursesubdirs createallsubdirs
 
 [Icons]
 Name: "{autoprograms}\{#MyAppName}"; Filename: "{app}\{#MyAppExeName}"; WorkingDir: "{app}"

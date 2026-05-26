@@ -34,7 +34,7 @@
 
 程序内置默认参考光谱和 SR 文件；用户手动打开、保存或导出文件时，默认从当前用户的文档目录开始选择，避免安装到系统程序目录后写入受限。
 
-导出结果可以保存为 `.xlsx` 或 `.csv`。导出 `.xlsx` 时会包含 `Summary`、`Bands`、`Data`、`Charts` 等工作表；如果已经完成 ISC 修正，还会包含 `CV_Groups`、`ISC_Correction`、`SR_Data`。导出结果时，程序会同步保存同名 `.inp` 输入文件，便于下次恢复现场。
+导出结果可以保存为 `.xlsx` 或 `.csv`。导出 `.xlsx` 时会包含 `Summary`、`Bands`、`Data`、`Charts` 等工作表；如果已经完成 ISC 修正，还会包含 `CV_Groups`、`ISC_Correction`、`SR_Data`。导出结果时，程序会同步保存同名 `.inp` 输入文件，便于再次恢复现场。
 
 单独导出 `光谱相关数据.xlsx` 时，`Summary` 页会先显示一张与界面一致的所有光谱对比图，下方汇总每组光谱的 SPD、SPC、MG、MMF；每组光谱还会生成独立页面，包含单组对比图和原始光谱数据。
 

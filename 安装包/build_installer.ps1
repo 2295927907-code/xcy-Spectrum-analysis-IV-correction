@@ -19,7 +19,7 @@ $distDir = Join-Path $buildDir "dist"
 $workDir = Join-Path $buildDir "pyinstaller-work"
 $specPath = Join-Path $configDir "spectral_spd_gui.spec"
 $issPath = Join-Path $configDir "installer.iss"
-$appExe = Join-Path $distDir "光谱匹配分析器\光谱匹配分析器.exe"
+$appExe = Join-Path $distDir "SpectrumMatchAnalyzer\SpectrumMatchAnalyzer.exe"
 $setupExe = Join-Path $outputDir "光谱匹配分析器_Setup.exe"
 
 function Write-Step {
